@@ -1,7 +1,7 @@
 {
   "name": "@uncle.ri.co/components",
   "author": "Rico Hancock",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -15,7 +15,7 @@
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build && yarn build-tailwind",
-    "build-tailwind": "npx tailwindcss -o ./dist/styles.css --minify",
+    "build-tailwind": "npx tailwindcss -o ./src/styles.css --minify",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
