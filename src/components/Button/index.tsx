@@ -1,7 +1,7 @@
-import React, { forwardRef, type ForwardedRef } from 'react';
+import React, { forwardRef, ForwardedRef } from 'react';
 import { FocusRing } from '@react-aria/focus';
 import { ButtonProps } from './ButtonConstants';
-import {twMerge} from 'tailwind-merge';
+import { twMerge } from 'tailwind-merge';
 import { cva } from 'class-variance-authority';
 
 const buttonVariants = cva(
@@ -13,7 +13,8 @@ const buttonVariants = cva(
           'shadow text-white border px-2 hover:border-violet-400 hover:bg-violet-400 disabled:bg-grey-400 disabled:border-grey-400 bg-violet-500 border-violet-500 active:border-violet-400 active:bg-violet-400',
         outlined:
           'shadow bg-white border-2 px-2 border-violet-500 text-violet-500 hover:text-violet-400 disabled:text-grey-400 disabled:border-grey-400 active:text-violet-400',
-        text: 'text-violet-500 rounded-none border-0 h-auto w-auto hover:text-violet-400 disabled:text-grey-400',
+        text:
+          'text-violet-500 rounded-none border-0 h-auto w-auto hover:text-violet-400 disabled:text-grey-400',
       },
       size: {
         large: 'w-full max-w-button',
@@ -68,7 +69,7 @@ const Button: React.FC<ButtonProps> = forwardRef(
           {...props}
           disabled={disabled || isLoading}
         >
-            children
+          children
         </button>
       </FocusRing>
     );
