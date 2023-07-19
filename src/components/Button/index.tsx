@@ -10,15 +10,15 @@ const buttonVariants = cva(
     variants: {
       variant: {
         solid:
-          'shadow text-white border px-cove-2 hover:border-cove-navy-blue hover:bg-cove-navy-blue disabled:bg-cove-dark-grey disabled:border-cove-dark-grey bg-cove-blue border-cove-blue active:border-cove-navy-blue active:bg-cove-navy-blue',
+          'shadow text-white border px-2 hover:border-violet-400 hover:bg-violet-400 disabled:bg-grey-400 disabled:border-grey-400 bg-violet-500 border-violet-500 active:border-violet-400 active:bg-violet-400',
         outlined:
-          'shadow bg-white border-2 px-cove-2 border-cove-blue text-cove-blue hover:text-cove-navy-blue disabled:text-cove-dark-grey disabled:border-cove-dark-grey active:text-cove-navy-blue',
-        text: 'text-cove-blue rounded-none border-0 h-auto w-auto hover:text-cove-navy-blue disabled:text-cove-dark-grey',
+          'shadow bg-white border-2 px-2 border-violet-500 text-violet-500 hover:text-violet-400 disabled:text-grey-400 disabled:border-grey-400 active:text-violet-400',
+        text: 'text-violet-500 rounded-none border-0 h-auto w-auto hover:text-violet-400 disabled:text-grey-400',
       },
       size: {
-        large: 'h-cove-5 w-full max-w-button',
-        small: 'h-cove-4 w-auto max-w-none',
-        full: 'h-cove-5 w-full',
+        large: 'w-full max-w-button',
+        small: 'w-auto max-w-none',
+        full: 'w-full',
       },
     },
     defaultVariants: {
@@ -51,8 +51,8 @@ const Button: React.FC<ButtonProps> = forwardRef(
     return (
       <FocusRing
         focusRingClass={twMerge(
-          `active:ring-cove-navy-blue ring-cove-blue`,
-          `hover:ring-cove-navy-blue ring-1 ring-offset-2 ring-offset-white`
+          `active:ring-violet-400 ring-violet-500`,
+          `hover:ring-violet-400 ring-1 ring-offset-2 ring-offset-white`
         )}
       >
         <button
