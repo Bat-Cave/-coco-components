@@ -1,5 +1,7 @@
 {
-  "version": "0.1.0",
+  "name": "@coco/components",
+  "author": "Rico Hancock",
+  "version": "0.0.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -34,8 +36,6 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "coco-testing",
-  "author": "Rico",
   "module": "dist/coco-testing.esm.js",
   "size-limit": [
     {
