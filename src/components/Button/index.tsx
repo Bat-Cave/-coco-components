@@ -17,7 +17,7 @@ const buttonVariants = cva(
           'text-violet-500 rounded-none border-0 h-auto w-auto hover:text-violet-400 disabled:text-grey-400',
       },
       size: {
-        large: 'w-full max-w-button',
+        large: 'w-full max-w-[300px]',
         small: 'w-auto max-w-none',
         full: 'w-full',
       },
