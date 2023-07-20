@@ -5,21 +5,21 @@ import { twMerge } from 'tailwind-merge';
 import { cva } from 'class-variance-authority';
 
 const buttonVariants = cva(
-  'flex select-none items-center justify-center rounded-full font-sans transition duration-200 focus:outline-none',
+  'flex select-none items-center justify-center rounded-full font-sans transition duration-200 focus:outline-none font-semibold',
   {
     variants: {
       variant: {
         solid:
-          'shadow text-white border px-2 hover:border-violet-400 hover:bg-violet-400 disabled:bg-grey-400 disabled:border-grey-400 bg-violet-500 border-violet-500 active:border-violet-400 active:bg-violet-400',
+          'shadow text-white border px-2 hover:border-violet-600 hover:bg-violet-600 disabled:bg-grey-400 disabled:border-grey-400 bg-violet-500 border-violet-500 active:border-violet-600 active:bg-violet-600',
         outlined:
-          'shadow bg-white border-2 px-2 border-violet-500 text-violet-500 hover:text-violet-400 disabled:text-grey-400 disabled:border-grey-400 active:text-violet-400',
+          'shadow bg-white border-2 px-2 border-violet-500 text-violet-500 hover:text-violet-900 disabled:text-grey-400 disabled:border-grey-400 active:text-violet-900',
         text:
-          'text-violet-500 rounded-none border-0 h-auto w-auto hover:text-violet-400 disabled:text-grey-400',
+          'text-violet-500 rounded-none border-0 h-auto w-auto hover:text-violet-900 active:text-violet-900 disabled:text-grey-400',
       },
       size: {
-        large: 'w-full max-w-[300px]',
-        small: 'w-auto max-w-none',
-        full: 'w-full',
+        large: 'w-full max-w-[250px] py-2 px-4',
+        small: 'w-auto max-w-none py-1 px-2',
+        full: 'w-full py-2 px-4',
       },
     },
     defaultVariants: {
@@ -29,7 +29,7 @@ const buttonVariants = cva(
     compoundVariants: [
       {
         variant: 'text',
-        className: 'h-auto w-auto max-w-none',
+        className: 'h-auto w-auto max-w-none p-0',
       },
     ],
   }
@@ -52,8 +52,8 @@ const Button: React.FC<ButtonProps> = forwardRef(
     return (
       <FocusRing
         focusRingClass={twMerge(
-          `active:ring-violet-400 ring-violet-500`,
-          `hover:ring-violet-400 ring-1 ring-offset-2 ring-offset-white`
+          `active:ring-violet-600 ring-violet-500`,
+          `hover:ring-violet-600 ring-1 ring-offset-2 ring-offset-white`
         )}
       >
         <button
@@ -69,7 +69,7 @@ const Button: React.FC<ButtonProps> = forwardRef(
           {...props}
           disabled={disabled || isLoading}
         >
-          children
+          {children}
         </button>
       </FocusRing>
     );
