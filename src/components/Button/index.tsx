@@ -3,6 +3,7 @@ import { FocusRing } from '@react-aria/focus';
 import { ButtonProps } from './ButtonConstants';
 import { twMerge } from 'tailwind-merge';
 import { cva } from 'class-variance-authority';
+import type {} from "class-variance-authority/node_modules/clsx";
 
 const buttonVariants = cva(
   'flex select-none items-center justify-center rounded-full font-sans transition duration-200 focus:outline-none font-semibold',
