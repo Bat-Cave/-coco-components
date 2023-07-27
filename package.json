@@ -1,6 +1,6 @@
 {
   "name": "@uncle.ri.co/components",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "license": "MIT",
   "author": "Rico",
   "main": "dist/index.js",
@@ -83,9 +83,11 @@
     "typescript": "^5.1.6"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.0.4",
     "@react-aria/focus": "^3.13.0",
     "class-variance-authority": "^0.7.0",
     "cross-spawn": "^7.0.3",
+    "framer-motion": "^10.14.0",
     "react-aria": "^3.26.0",
     "tailwind-merge": "^1.14.0"
   }
